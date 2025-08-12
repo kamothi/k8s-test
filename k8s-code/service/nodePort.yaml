@@ -11,3 +11,6 @@ spec:
       port: 80        # 서비스 포트(ClusterIP)
       targetPort: 80  # 파드 컨테이너 포트
       nodePort: 30080 # 노드에서 개방할 포트 (30000~32767)
+  selector:
+    app: myapp
+    type: front-end
