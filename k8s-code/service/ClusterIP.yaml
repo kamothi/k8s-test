@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: back-end
+spec:
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      port: 80        # 서비스 포트
+      targetPort: 80  # 파드의 컨테이너 포트
+  selector:
+    app: nginx
