@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: mem-cpu-limit-range
+  namespace: dev
+spec:
+  limits:
+  - default:
+      cpu: "1"          # limit 기본값
+      memory: "512Mi"
+    defaultRequest:
+      cpu: "500m"       # request 기본값
+      memory: "256Mi"
+    type: Container
