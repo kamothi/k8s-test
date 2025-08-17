@@ -5,3 +5,15 @@ metadata:
 value: 100000
 globalDefault: false
 description: "이 클래스는 중요한 파드에 사용됩니다."
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: important-pod
+spec:
+  priorityClassName: high-priority
+  containers:
+  - name: nginx
+    image: nginx
